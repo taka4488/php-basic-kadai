@@ -18,8 +18,11 @@
           $this -> name = $name;
           $this -> price = $price;
         }
-        public function show_price(int $price){
-          echo $this -> price = $price;
+        private function set_price(int $price){
+          $this -> price = $price;
+        }
+        public function show_price(){
+          echo $this -> price;
         }
       }
         
@@ -34,8 +37,11 @@
           $this -> height = $height;
           $this -> weight = $weight;
         }
-        public function show_height(int $height){
-          echo $this -> height = $height;
+        private function set_height(int $height){
+           $this -> height = $height;
+        }
+        public function show_height(){
+          echo $this -> height;
         }
       }
       $food = new Food ('potato',250);
@@ -45,9 +51,9 @@
       echo '<br>';
       print_r($animal);
       echo '<br>';
-      $food ->show_price(250);
+      $food ->show_price();
       echo '<br>';
-      $animal ->show_height(60);
+      $animal ->show_height();
       ?>
       </P>
       
